@@ -106,8 +106,8 @@ const RobotDashboard = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <img 
-                    src="/lovable-uploads/fad06b8b-a7a4-4f44-8641-2d9a0c34340c.png" 
-                    alt="Arduino HuskyLens Robot Car"
+                    src="/lovable-uploads/a4fcfe58-a240-4124-bf0f-37ad7ed79142.png" 
+                    alt="Arduino HuskyLens Robot Car - Detailed View"
                     className="w-full h-auto rounded-lg border border-border/20 shadow-lg"
                   />
                 </div>
@@ -115,9 +115,10 @@ const RobotDashboard = () => {
                   <div>
                     <h4 className="font-semibold text-primary mb-2">AI Face Tracking Robot Car</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      This Arduino Uno-based robot features advanced AI vision capabilities powered by the HuskyLens camera module. 
-                      The compact 4-wheel design with yellow mecanum-style wheels provides excellent maneuverability for both 
-                      autonomous face tracking and precision line following operations.
+                      This Arduino Uno R3-based robot features sophisticated AI vision capabilities powered by the HuskyLens camera module. 
+                      The robust chassis houses a SMART V3.0 motor driver shield controlling four independent DC motors with yellow wheels. 
+                      Equipped with dual ultrasonic sensors for obstacle detection and a dedicated battery pack for extended operation, 
+                      this robot excels in both autonomous face tracking and precision line following applications.
                     </p>
                   </div>
                   
