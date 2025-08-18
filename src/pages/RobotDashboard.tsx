@@ -98,6 +98,60 @@ const RobotDashboard = () => {
           </Card>
         </div>
 
+        {/* Hardware Overview */}
+        <div className="lg:col-span-3">
+          <Card className="glass panel-shadow border-border/50 mb-6">
+            <div className="p-6">
+              <h3 className="text-lg font-semibold mb-4 text-foreground">Hardware Overview</h3>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <img 
+                    src="/lovable-uploads/fad06b8b-a7a4-4f44-8641-2d9a0c34340c.png" 
+                    alt="Arduino HuskyLens Robot Car"
+                    className="w-full h-auto rounded-lg border border-border/20 shadow-lg"
+                  />
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">AI Face Tracking Robot Car</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      This Arduino Uno-based robot features advanced AI vision capabilities powered by the HuskyLens camera module. 
+                      The compact 4-wheel design with yellow mecanum-style wheels provides excellent maneuverability for both 
+                      autonomous face tracking and precision line following operations.
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Controller:</span>
+                      <Badge variant="outline">Arduino Uno R3</Badge>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">AI Vision:</span>
+                      <Badge variant="outline">HuskyLens Camera</Badge>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Motor Shield:</span>
+                      <Badge variant="outline">SMART V3.0</Badge>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Drive System:</span>
+                      <Badge variant="outline">4x DC Motors</Badge>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Capabilities:</span>
+                      <div className="flex space-x-1">
+                        <Badge variant="default" className="text-xs">Face Tracking</Badge>
+                        <Badge variant="default" className="text-xs">Line Following</Badge>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+
         {/* Data Panel - Full width on mobile, spans remaining columns on large */}
         <div className="lg:col-span-3">
           <DataPanel />
