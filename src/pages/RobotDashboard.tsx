@@ -8,7 +8,10 @@ import {
   Battery,
   Camera,
   Zap,
-  Cog
+  Cog,
+  Users,
+  User,
+  Star
 } from "lucide-react";
 
 const RobotDashboard = () => {
@@ -16,12 +19,12 @@ const RobotDashboard = () => {
     <div className="min-h-screen relative p-4 md:p-6">
       {/* Circuit Background */}
       <div 
-        className="fixed inset-0 opacity-20 bg-cover bg-center z-0"
+        className="fixed inset-0 opacity-40 bg-cover bg-center z-0"
         style={{
-          backgroundImage: "url('/lovable-uploads/78a6ebdb-d092-48bc-9a0e-003e8f085186.png')"
+          backgroundImage: "url('/lovable-uploads/361c912a-9e4b-4fd4-bf92-222b03aadfec.png')"
         }}
       />
-      <div className="fixed inset-0 bg-background/80 z-0" />
+      <div className="fixed inset-0 bg-background/70 z-0" />
       
       {/* Content */}
       <div className="relative z-10">
@@ -32,7 +35,7 @@ const RobotDashboard = () => {
             <Bot className="h-12 w-12 text-primary animate-pulse-glow" />
           </div>
           <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
-            HuskyLens AI Robot Car
+            AI Tracking Car
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Advanced Arduino-based robotics platform featuring AI-powered face tracking, autonomous line following, 
@@ -75,8 +78,8 @@ const RobotDashboard = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="space-y-4">
               <img 
-                src="/lovable-uploads/a4fcfe58-a240-4124-bf0f-37ad7ed79142.png" 
-                alt="Arduino HuskyLens Robot Car - Detailed View"
+                src="/lovable-uploads/ff30c87a-b1f4-42a1-922c-84a3372026be.png" 
+                alt="AI Tracking Car - Detailed View"
                 className="w-full h-auto rounded-lg border border-border/20 shadow-lg"
               />
             </div>
@@ -164,6 +167,33 @@ const RobotDashboard = () => {
               <h4 className="font-semibold mb-1">Control System</h4>
               <p className="text-sm text-muted-foreground">Precision Control</p>
               <p className="text-xs text-muted-foreground">Smooth Movement</p>
+            </div>
+          </div>
+        </div>
+      </Card>
+
+      {/* Team Section */}
+      <Card className="glass panel-shadow border-border/50 mb-8">
+        <div className="p-6">
+          <h3 className="text-2xl font-semibold mb-6 text-center text-foreground">Our Team</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center p-4 bg-muted/20 rounded-lg">
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
+              <h4 className="font-semibold text-lg mb-1">Wajdi Jehad</h4>
+              <p className="text-sm text-muted-foreground">Team Leader</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+            </div>
+            <div className="text-center p-4 bg-muted/20 rounded-lg">
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
+              <h4 className="font-semibold text-lg mb-1">Fares Mahmoud</h4>
+              <p className="text-sm text-muted-foreground">Hardware Engineer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+            </div>
+            <div className="text-center p-4 bg-muted/20 rounded-lg">
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
+              <h4 className="font-semibold text-lg mb-1">Ali Omair</h4>
+              <p className="text-sm text-muted-foreground">Software Developer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
             </div>
           </div>
         </div>
