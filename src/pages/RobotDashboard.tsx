@@ -66,7 +66,7 @@ const RobotDashboard = () => {
           <Zap className="h-8 w-8 text-primary mx-auto mb-3" />
           <h3 className="font-semibold text-lg mb-2">Motor Control</h3>
           <p className="text-sm text-muted-foreground">
-            SMART V3.0 motor shield provides independent control of four DC motors for omnidirectional movement.
+            L293D provides independent control of four DC motors for omnidirectional movement.
           </p>
         </Card>
       </div>
@@ -114,7 +114,7 @@ const RobotDashboard = () => {
                     <Cog className="h-5 w-5 text-primary" />
                     <span className="text-muted-foreground">Motor Shield:</span>
                   </div>
-                  <Badge variant="outline">SMART V3.0</Badge>
+                  <Badge variant="outline">L293D</Badge>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
                   <div className="flex items-center space-x-3">
