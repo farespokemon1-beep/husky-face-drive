@@ -18,7 +18,7 @@ const RobotDashboard = () => {
       <div 
         className="fixed inset-0 opacity-20 bg-cover bg-center z-0"
         style={{
-          backgroundImage: "url('/lovable-uploads/a4fcfe58-a240-4124-bf0f-37ad7ed79142.png')"
+          backgroundImage: "url('/lovable-uploads/78a6ebdb-d092-48bc-9a0e-003e8f085186.png')"
         }}
       />
       <div className="fixed inset-0 bg-background/80 z-0" />
