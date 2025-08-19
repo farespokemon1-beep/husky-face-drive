@@ -13,7 +13,18 @@ import {
 
 const RobotDashboard = () => {
   return (
-    <div className="min-h-screen bg-background p-4 md:p-6">
+    <div className="min-h-screen relative p-4 md:p-6">
+      {/* Circuit Background */}
+      <div 
+        className="fixed inset-0 opacity-20 bg-cover bg-center z-0"
+        style={{
+          backgroundImage: "url('/lovable-uploads/288f6c5a-275f-4b13-ad2b-ed8010948cd7.png')"
+        }}
+      />
+      <div className="fixed inset-0 bg-background/80 z-0" />
+      
+      {/* Content */}
+      <div className="relative z-10">
       {/* Hero Section */}
       <Card className="glass panel-shadow border-border/50 mb-8">
         <div className="p-8 text-center">
@@ -184,6 +195,7 @@ const RobotDashboard = () => {
           </div>
         </div>
       </Card>
+      </div>
     </div>
   );
 };
