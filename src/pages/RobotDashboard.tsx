@@ -13,6 +13,7 @@ import {
   User,
   Star
 } from "lucide-react";
+import fablabLogo from "@/assets/fablab-logo.png";
 
 const RobotDashboard = () => {
   return (
@@ -26,6 +27,15 @@ const RobotDashboard = () => {
       />
       <div className="fixed inset-0 bg-background/70 z-0" />
       
+      {/* FabLab Logo */}
+      <div className="fixed top-4 right-4 z-20">
+        <img 
+          src={fablabLogo} 
+          alt="Al Hasa FabLab Logo" 
+          className="h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+        />
+      </div>
+
       {/* Content */}
       <div className="relative z-10">
       {/* Hero Section */}
