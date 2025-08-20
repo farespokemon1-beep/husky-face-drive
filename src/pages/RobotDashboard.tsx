@@ -185,24 +185,36 @@ const RobotDashboard = () => {
       {/* Team Section */}
       <Card className="glass panel-shadow border-border/50 mb-8">
         <div className="p-6">
-          <h3 className="text-2xl font-semibold mb-6 text-center text-foreground">Our Team</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <h3 className="text-2xl font-semibold mb-6 text-center text-foreground">فريق المهندسين</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="text-center p-4 bg-muted/20 rounded-lg">
               <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">Wajdi Jehad</h4>
-              <p className="text-sm text-muted-foreground">Team Leader</p>
+              <h4 className="font-semibold text-lg mb-1">م/احمد غسان الربايعة</h4>
+              <p className="text-sm text-muted-foreground">مهندس المشروع</p>
               <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
             </div>
             <div className="text-center p-4 bg-muted/20 rounded-lg">
               <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">Fares Mahmoud</h4>
-              <p className="text-sm text-muted-foreground">Hardware Engineer</p>
+              <h4 className="font-semibold text-lg mb-1">م/اسماء ابوضيف</h4>
+              <p className="text-sm text-muted-foreground">مهندسة النظم</p>
               <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
             </div>
             <div className="text-center p-4 bg-muted/20 rounded-lg">
               <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">Ali Omair</h4>
-              <p className="text-sm text-muted-foreground">Software Developer</p>
+              <h4 className="font-semibold text-lg mb-1">م/طاهر علي المجحد</h4>
+              <p className="text-sm text-muted-foreground">مهندس الأجهزة</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+            </div>
+            <div className="text-center p-4 bg-muted/20 rounded-lg">
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
+              <h4 className="font-semibold text-lg mb-1">ا/اسامة ابوضيف</h4>
+              <p className="text-sm text-muted-foreground">مساعد مهندس</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+            </div>
+            <div className="text-center p-4 bg-muted/20 rounded-lg">
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
+              <h4 className="font-semibold text-lg mb-1">م/ يزن غسان الربايعة</h4>
+              <p className="text-sm text-muted-foreground">مهندس البرمجيات</p>
               <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
             </div>
           </div>
