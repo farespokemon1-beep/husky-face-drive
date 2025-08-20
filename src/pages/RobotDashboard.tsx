@@ -30,9 +30,9 @@ const RobotDashboard = () => {
       {/* FabLab Logo */}
       <div className="fixed top-4 right-4 z-20">
         <img 
-          src={fablabLogo} 
+          src="/lovable-uploads/291d76c0-039c-4d6d-8c57-b843c939edb2.png" 
           alt="Al Hasa FabLab Logo" 
-          className="h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+          className="h-12 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300 rounded-lg"
         />
       </div>
 
