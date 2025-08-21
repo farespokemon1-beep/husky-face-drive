@@ -381,13 +381,15 @@ const RobotDashboard = () => {
                   hsl(var(--primary) / 0.1) 100%)
                 `,
               } as React.CSSProperties}
-              className="text-center p-4 rounded-lg border border-transparent
-              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+              className="text-center p-4 rounded-lg border border-transparent cursor-pointer group
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]
+              transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20
+              hover:[background:padding-box_var(--bg-color),border-box_linear-gradient(145deg,hsl(var(--primary))_0%,hsl(var(--primary)/_0.4)_33.33%,hsl(var(--primary)/_0.2)_66.67%,hsl(var(--primary)/_0.15)_100%)]"
             >
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1 text-foreground">Wajdi Jehad</h4>
-              <p className="text-sm text-muted-foreground">Project Manager</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse group-hover:scale-110 group-hover:text-primary/90 transition-all duration-300" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground group-hover:text-primary transition-colors duration-300">Wajdi Jehad</h4>
+              <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">Project Manager</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse group-hover:scale-125 group-hover:text-yellow-400 transition-all duration-300" />
             </div>
             <div
               style={{
@@ -401,13 +403,15 @@ const RobotDashboard = () => {
                   hsl(var(--primary) / 0.1) 100%)
                 `,
               } as React.CSSProperties}
-              className="text-center p-4 rounded-lg border border-transparent
-              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+              className="text-center p-4 rounded-lg border border-transparent cursor-pointer group
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]
+              transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20
+              hover:[background:padding-box_var(--bg-color),border-box_linear-gradient(145deg,hsl(var(--primary))_0%,hsl(var(--primary)/_0.4)_33.33%,hsl(var(--primary)/_0.2)_66.67%,hsl(var(--primary)/_0.15)_100%)]"
             >
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1 text-foreground">Ahmad Ghassan Al-Rabaiah</h4>
-              <p className="text-sm text-muted-foreground">Project Engineer</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse group-hover:scale-110 group-hover:text-primary/90 transition-all duration-300" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground group-hover:text-primary transition-colors duration-300">Ahmad Ghassan Al-Rabaiah</h4>
+              <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">Project Engineer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse group-hover:scale-125 group-hover:text-yellow-400 transition-all duration-300" />
             </div>
             <div
               style={{
@@ -421,13 +425,15 @@ const RobotDashboard = () => {
                   hsl(var(--primary) / 0.1) 100%)
                 `,
               } as React.CSSProperties}
-              className="text-center p-4 rounded-lg border border-transparent
-              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+              className="text-center p-4 rounded-lg border border-transparent cursor-pointer group
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]
+              transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20
+              hover:[background:padding-box_var(--bg-color),border-box_linear-gradient(145deg,hsl(var(--primary))_0%,hsl(var(--primary)/_0.4)_33.33%,hsl(var(--primary)/_0.2)_66.67%,hsl(var(--primary)/_0.15)_100%)]"
             >
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1 text-foreground">Asma Abu Dhaif</h4>
-              <p className="text-sm text-muted-foreground">Systems Engineer</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse group-hover:scale-110 group-hover:text-primary/90 transition-all duration-300" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground group-hover:text-primary transition-colors duration-300">Asma Abu Dhaif</h4>
+              <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">Systems Engineer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse group-hover:scale-125 group-hover:text-yellow-400 transition-all duration-300" />
             </div>
             <div
               style={{
@@ -441,13 +447,15 @@ const RobotDashboard = () => {
                   hsl(var(--primary) / 0.1) 100%)
                 `,
               } as React.CSSProperties}
-              className="text-center p-4 rounded-lg border border-transparent
-              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+              className="text-center p-4 rounded-lg border border-transparent cursor-pointer group
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]
+              transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20
+              hover:[background:padding-box_var(--bg-color),border-box_linear-gradient(145deg,hsl(var(--primary))_0%,hsl(var(--primary)/_0.4)_33.33%,hsl(var(--primary)/_0.2)_66.67%,hsl(var(--primary)/_0.15)_100%)]"
             >
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1 text-foreground">Taher Ali Al-Majhad</h4>
-              <p className="text-sm text-muted-foreground">Hardware Engineer</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse group-hover:scale-110 group-hover:text-primary/90 transition-all duration-300" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground group-hover:text-primary transition-colors duration-300">Taher Ali Al-Majhad</h4>
+              <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">Hardware Engineer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse group-hover:scale-125 group-hover:text-yellow-400 transition-all duration-300" />
             </div>
             <div
               style={{
@@ -461,13 +469,15 @@ const RobotDashboard = () => {
                   hsl(var(--primary) / 0.1) 100%)
                 `,
               } as React.CSSProperties}
-              className="text-center p-4 rounded-lg border border-transparent
-              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+              className="text-center p-4 rounded-lg border border-transparent cursor-pointer group
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]
+              transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20
+              hover:[background:padding-box_var(--bg-color),border-box_linear-gradient(145deg,hsl(var(--primary))_0%,hsl(var(--primary)/_0.4)_33.33%,hsl(var(--primary)/_0.2)_66.67%,hsl(var(--primary)/_0.15)_100%)]"
             >
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1 text-foreground">Osama Abu Dhaif</h4>
-              <p className="text-sm text-muted-foreground">Assistant Engineer</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse group-hover:scale-110 group-hover:text-primary/90 transition-all duration-300" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground group-hover:text-primary transition-colors duration-300">Osama Abu Dhaif</h4>
+              <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">Assistant Engineer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse group-hover:scale-125 group-hover:text-yellow-400 transition-all duration-300" />
             </div>
             <div
               style={{
@@ -481,13 +491,15 @@ const RobotDashboard = () => {
                   hsl(var(--primary) / 0.1) 100%)
                 `,
               } as React.CSSProperties}
-              className="text-center p-4 rounded-lg border border-transparent
-              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+              className="text-center p-4 rounded-lg border border-transparent cursor-pointer group
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]
+              transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20
+              hover:[background:padding-box_var(--bg-color),border-box_linear-gradient(145deg,hsl(var(--primary))_0%,hsl(var(--primary)/_0.4)_33.33%,hsl(var(--primary)/_0.2)_66.67%,hsl(var(--primary)/_0.15)_100%)]"
             >
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1 text-foreground">Yazan Ghassan Al-Rabaiah</h4>
-              <p className="text-sm text-muted-foreground">Software Engineer</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse group-hover:scale-110 group-hover:text-primary/90 transition-all duration-300" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground group-hover:text-primary transition-colors duration-300">Yazan Ghassan Al-Rabaiah</h4>
+              <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">Software Engineer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse group-hover:scale-125 group-hover:text-yellow-400 transition-all duration-300" />
             </div>
             <div
               style={{
@@ -501,13 +513,15 @@ const RobotDashboard = () => {
                   hsl(var(--primary) / 0.1) 100%)
                 `,
               } as React.CSSProperties}
-              className="text-center p-4 rounded-lg border border-transparent
-              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+              className="text-center p-4 rounded-lg border border-transparent cursor-pointer group
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]
+              transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20
+              hover:[background:padding-box_var(--bg-color),border-box_linear-gradient(145deg,hsl(var(--primary))_0%,hsl(var(--primary)/_0.4)_33.33%,hsl(var(--primary)/_0.2)_66.67%,hsl(var(--primary)/_0.15)_100%)]"
             >
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1 text-foreground">Fares Mahmoud</h4>
-              <p className="text-sm text-muted-foreground">Hardware Engineer</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse group-hover:scale-110 group-hover:text-primary/90 transition-all duration-300" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground group-hover:text-primary transition-colors duration-300">Fares Mahmoud</h4>
+              <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">Hardware Engineer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse group-hover:scale-125 group-hover:text-yellow-400 transition-all duration-300" />
             </div>
             <div
               style={{
@@ -521,13 +535,15 @@ const RobotDashboard = () => {
                   hsl(var(--primary) / 0.1) 100%)
                 `,
               } as React.CSSProperties}
-              className="text-center p-4 rounded-lg border border-transparent
-              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+              className="text-center p-4 rounded-lg border border-transparent cursor-pointer group
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]
+              transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20
+              hover:[background:padding-box_var(--bg-color),border-box_linear-gradient(145deg,hsl(var(--primary))_0%,hsl(var(--primary)/_0.4)_33.33%,hsl(var(--primary)/_0.2)_66.67%,hsl(var(--primary)/_0.15)_100%)]"
             >
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1 text-foreground">Ali Al-Omair</h4>
-              <p className="text-sm text-muted-foreground">Software Developer</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse group-hover:scale-110 group-hover:text-primary/90 transition-all duration-300" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground group-hover:text-primary transition-colors duration-300">Ali Al-Omair</h4>
+              <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">Software Developer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse group-hover:scale-125 group-hover:text-yellow-400 transition-all duration-300" />
             </div>
           </div>
         </div>
