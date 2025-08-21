@@ -185,53 +185,165 @@ const RobotDashboard = () => {
       {/* Team Section */}
       <Card className="glass panel-shadow border-border/50 mb-8">
         <div className="p-6">
-          <h3 className="text-2xl font-semibold mb-6 text-center text-foreground">فريق المهندسين</h3>
+          <h3 className="text-2xl font-semibold mb-6 text-center text-foreground">Engineering Team</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-4 bg-muted/20 rounded-lg">
+            <div
+              style={{
+                "--background": "hsl(var(--muted))",
+                "--highlight": "hsl(var(--primary))",
+                "--bg-color": "linear-gradient(var(--background), var(--background))",
+                "--border-color": `linear-gradient(145deg,
+                  var(--highlight) 0%,
+                  hsl(var(--primary) / 0.3) 33.33%,
+                  hsl(var(--primary) / 0.14) 66.67%,
+                  hsl(var(--primary) / 0.1) 100%)
+                `,
+              } as React.CSSProperties}
+              className="text-center p-4 rounded-lg border border-transparent
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+            >
               <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">Wajdi Jehad</h4>
+              <h4 className="font-semibold text-lg mb-1 text-foreground">Wajdi Jehad</h4>
               <p className="text-sm text-muted-foreground">Project Manager</p>
               <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
             </div>
-            <div className="text-center p-4 bg-muted/20 rounded-lg">
+            <div
+              style={{
+                "--background": "hsl(var(--muted))",
+                "--highlight": "hsl(var(--primary))",
+                "--bg-color": "linear-gradient(var(--background), var(--background))",
+                "--border-color": `linear-gradient(145deg,
+                  var(--highlight) 0%,
+                  hsl(var(--primary) / 0.3) 33.33%,
+                  hsl(var(--primary) / 0.14) 66.67%,
+                  hsl(var(--primary) / 0.1) 100%)
+                `,
+              } as React.CSSProperties}
+              className="text-center p-4 rounded-lg border border-transparent
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+            >
               <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">م/احمد غسان الربايعة</h4>
-              <p className="text-sm text-muted-foreground">مهندس المشروع</p>
+              <h4 className="font-semibold text-lg mb-1 text-foreground">Ahmad Ghassan Al-Rabaiah</h4>
+              <p className="text-sm text-muted-foreground">Project Engineer</p>
               <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
             </div>
-            <div className="text-center p-4 bg-muted/20 rounded-lg">
+            <div
+              style={{
+                "--background": "hsl(var(--muted))",
+                "--highlight": "hsl(var(--primary))",
+                "--bg-color": "linear-gradient(var(--background), var(--background))",
+                "--border-color": `linear-gradient(145deg,
+                  var(--highlight) 0%,
+                  hsl(var(--primary) / 0.3) 33.33%,
+                  hsl(var(--primary) / 0.14) 66.67%,
+                  hsl(var(--primary) / 0.1) 100%)
+                `,
+              } as React.CSSProperties}
+              className="text-center p-4 rounded-lg border border-transparent
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+            >
               <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">م/اسماء ابوضيف</h4>
-              <p className="text-sm text-muted-foreground">مهندسة النظم</p>
+              <h4 className="font-semibold text-lg mb-1 text-foreground">Asma Abu Dhaif</h4>
+              <p className="text-sm text-muted-foreground">Systems Engineer</p>
               <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
             </div>
-            <div className="text-center p-4 bg-muted/20 rounded-lg">
+            <div
+              style={{
+                "--background": "hsl(var(--muted))",
+                "--highlight": "hsl(var(--primary))",
+                "--bg-color": "linear-gradient(var(--background), var(--background))",
+                "--border-color": `linear-gradient(145deg,
+                  var(--highlight) 0%,
+                  hsl(var(--primary) / 0.3) 33.33%,
+                  hsl(var(--primary) / 0.14) 66.67%,
+                  hsl(var(--primary) / 0.1) 100%)
+                `,
+              } as React.CSSProperties}
+              className="text-center p-4 rounded-lg border border-transparent
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+            >
               <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">م/طاهر علي المجحد</h4>
-              <p className="text-sm text-muted-foreground">مهندس الأجهزة</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
-            </div>
-            <div className="text-center p-4 bg-muted/20 rounded-lg">
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">ا/اسامة ابوضيف</h4>
-              <p className="text-sm text-muted-foreground">مساعد مهندس</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
-            </div>
-            <div className="text-center p-4 bg-muted/20 rounded-lg">
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">م/ يزن غسان الربايعة</h4>
-              <p className="text-sm text-muted-foreground">مهندس البرمجيات</p>
-              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
-            </div>
-            <div className="text-center p-4 bg-muted/20 rounded-lg">
-              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">Fares Mahmoud</h4>
+              <h4 className="font-semibold text-lg mb-1 text-foreground">Taher Ali Al-Majhad</h4>
               <p className="text-sm text-muted-foreground">Hardware Engineer</p>
               <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
             </div>
-            <div className="text-center p-4 bg-muted/20 rounded-lg">
+            <div
+              style={{
+                "--background": "hsl(var(--muted))",
+                "--highlight": "hsl(var(--primary))",
+                "--bg-color": "linear-gradient(var(--background), var(--background))",
+                "--border-color": `linear-gradient(145deg,
+                  var(--highlight) 0%,
+                  hsl(var(--primary) / 0.3) 33.33%,
+                  hsl(var(--primary) / 0.14) 66.67%,
+                  hsl(var(--primary) / 0.1) 100%)
+                `,
+              } as React.CSSProperties}
+              className="text-center p-4 rounded-lg border border-transparent
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+            >
               <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
-              <h4 className="font-semibold text-lg mb-1">Ali Al-Omair</h4>
+              <h4 className="font-semibold text-lg mb-1 text-foreground">Osama Abu Dhaif</h4>
+              <p className="text-sm text-muted-foreground">Assistant Engineer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+            </div>
+            <div
+              style={{
+                "--background": "hsl(var(--muted))",
+                "--highlight": "hsl(var(--primary))",
+                "--bg-color": "linear-gradient(var(--background), var(--background))",
+                "--border-color": `linear-gradient(145deg,
+                  var(--highlight) 0%,
+                  hsl(var(--primary) / 0.3) 33.33%,
+                  hsl(var(--primary) / 0.14) 66.67%,
+                  hsl(var(--primary) / 0.1) 100%)
+                `,
+              } as React.CSSProperties}
+              className="text-center p-4 rounded-lg border border-transparent
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+            >
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground">Yazan Ghassan Al-Rabaiah</h4>
+              <p className="text-sm text-muted-foreground">Software Engineer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+            </div>
+            <div
+              style={{
+                "--background": "hsl(var(--muted))",
+                "--highlight": "hsl(var(--primary))",
+                "--bg-color": "linear-gradient(var(--background), var(--background))",
+                "--border-color": `linear-gradient(145deg,
+                  var(--highlight) 0%,
+                  hsl(var(--primary) / 0.3) 33.33%,
+                  hsl(var(--primary) / 0.14) 66.67%,
+                  hsl(var(--primary) / 0.1) 100%)
+                `,
+              } as React.CSSProperties}
+              className="text-center p-4 rounded-lg border border-transparent
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+            >
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground">Fares Mahmoud</h4>
+              <p className="text-sm text-muted-foreground">Hardware Engineer</p>
+              <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
+            </div>
+            <div
+              style={{
+                "--background": "hsl(var(--muted))",
+                "--highlight": "hsl(var(--primary))",
+                "--bg-color": "linear-gradient(var(--background), var(--background))",
+                "--border-color": `linear-gradient(145deg,
+                  var(--highlight) 0%,
+                  hsl(var(--primary) / 0.3) 33.33%,
+                  hsl(var(--primary) / 0.14) 66.67%,
+                  hsl(var(--primary) / 0.1) 100%)
+                `,
+              } as React.CSSProperties}
+              className="text-center p-4 rounded-lg border border-transparent
+              [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+            >
+              <User className="h-12 w-12 text-primary mx-auto mb-3 animate-pulse" />
+              <h4 className="font-semibold text-lg mb-1 text-foreground">Ali Al-Omair</h4>
               <p className="text-sm text-muted-foreground">Software Developer</p>
               <Star className="h-4 w-4 text-yellow-500 mx-auto mt-2 animate-pulse" />
             </div>
