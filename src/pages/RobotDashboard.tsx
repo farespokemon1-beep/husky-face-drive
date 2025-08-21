@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { 
   Bot, 
   Eye,
@@ -11,11 +12,43 @@ import {
   Cog,
   Users,
   User,
-  Star
+  Star,
+  Info
 } from "lucide-react";
+import { useState } from "react";
 import fablabLogo from "@/assets/fablab-logo.png";
 
 const RobotDashboard = () => {
+  const [openDialog, setOpenDialog] = useState<string | null>(null);
+
+  const componentInfo = {
+    arduino: {
+      title: "Arduino Uno R3",
+      description: "The main microcontroller board that serves as the brain of the robot. It processes sensor data, executes AI algorithms, and controls all robot functions.",
+      specs: ["ATmega328P Microcontroller", "16MHz Clock Speed", "32KB Flash Memory", "14 Digital I/O Pins", "6 Analog Input Pins", "USB Programming Interface"]
+    },
+    huskylens: {
+      title: "HuskyLens AI Camera",
+      description: "Advanced AI vision sensor capable of face recognition, object tracking, and line following. Features built-in machine learning algorithms for real-time image processing.",
+      specs: ["AI-powered Vision Processing", "Face Recognition & Tracking", "Object Detection", "Line Following Detection", "UART/I2C Communication", "2.0-inch IPS Screen"]
+    },
+    motordriver: {
+      title: "L293D Motor Driver Shield",
+      description: "Dual H-bridge motor driver that controls up to 4 DC motors independently. Provides proper voltage and current regulation for smooth motor operation.",
+      specs: ["Dual H-Bridge Design", "4 DC Motor Control", "600mA Per Channel", "4.5V to 36V Operating Range", "Built-in Protection Diodes", "PWM Speed Control"]
+    },
+    motors: {
+      title: "4x DC Geared Motors",
+      description: "High-torque geared DC motors with yellow wheels providing omnidirectional movement capability. Each motor is independently controlled for precise navigation.",
+      specs: ["Gear Reduction for Higher Torque", "Yellow Rubber Wheels", "Independent Speed Control", "Forward/Reverse Operation", "Low Power Consumption", "Smooth Acceleration"]
+    },
+    capabilities: {
+      title: "AI Capabilities",
+      description: "Advanced artificial intelligence features enabling autonomous operation and intelligent interaction with the environment through computer vision.",
+      specs: ["Real-time Face Tracking", "Autonomous Line Following", "Obstacle Detection", "Path Planning", "Multi-mode Operation", "Adaptive Behavior"]
+    }
+  };
+
   return (
     <div className="min-h-screen relative p-4 md:p-6">
       {/* Circuit Background */}
@@ -105,44 +138,193 @@ const RobotDashboard = () => {
               </div>
               
               <div className="space-y-4">
-                <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Cpu className="h-5 w-5 text-primary" />
-                    <span className="text-muted-foreground">Controller:</span>
-                  </div>
-                  <Badge variant="outline">Arduino Uno R3</Badge>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Camera className="h-5 w-5 text-primary" />
-                    <span className="text-muted-foreground">AI Vision:</span>
-                  </div>
-                  <Badge variant="outline">HuskyLens Camera</Badge>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Cog className="h-5 w-5 text-primary" />
-                    <span className="text-muted-foreground">Motor Shield:</span>
-                  </div>
-                  <Badge variant="outline">L293D</Badge>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Zap className="h-5 w-5 text-primary" />
-                    <span className="text-muted-foreground">Drive System:</span>
-                  </div>
-                  <Badge variant="outline">4x DC Motors</Badge>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Bot className="h-5 w-5 text-primary" />
-                    <span className="text-muted-foreground">Capabilities:</span>
-                  </div>
-                  <div className="flex space-x-2">
-                    <Badge variant="default">Face Tracking</Badge>
-                    <Badge variant="default">Line Following</Badge>
-                  </div>
-                </div>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg cursor-pointer hover:bg-muted/50 transition-all duration-300 hover:scale-[1.02] group">
+                      <div className="flex items-center space-x-3">
+                        <Cpu className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-300" />
+                        <span className="text-muted-foreground">Controller:</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Badge variant="outline">Arduino Uno R3</Badge>
+                        <Info className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md animate-in fade-in-0 zoom-in-95 duration-300">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center space-x-2">
+                        <Cpu className="h-5 w-5 text-primary" />
+                        <span>{componentInfo.arduino.title}</span>
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <p className="text-muted-foreground">{componentInfo.arduino.description}</p>
+                      <div>
+                        <h4 className="font-semibold mb-2">Technical Specifications:</h4>
+                        <ul className="space-y-1 text-sm text-muted-foreground">
+                          {componentInfo.arduino.specs.map((spec, index) => (
+                            <li key={index} className="flex items-center space-x-2">
+                              <div className="w-1 h-1 bg-primary rounded-full"></div>
+                              <span>{spec}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg cursor-pointer hover:bg-muted/50 transition-all duration-300 hover:scale-[1.02] group">
+                      <div className="flex items-center space-x-3">
+                        <Camera className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-300" />
+                        <span className="text-muted-foreground">AI Vision:</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Badge variant="outline">HuskyLens Camera</Badge>
+                        <Info className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md animate-in fade-in-0 zoom-in-95 duration-300">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center space-x-2">
+                        <Camera className="h-5 w-5 text-primary" />
+                        <span>{componentInfo.huskylens.title}</span>
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <p className="text-muted-foreground">{componentInfo.huskylens.description}</p>
+                      <div>
+                        <h4 className="font-semibold mb-2">Key Features:</h4>
+                        <ul className="space-y-1 text-sm text-muted-foreground">
+                          {componentInfo.huskylens.specs.map((spec, index) => (
+                            <li key={index} className="flex items-center space-x-2">
+                              <div className="w-1 h-1 bg-primary rounded-full"></div>
+                              <span>{spec}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg cursor-pointer hover:bg-muted/50 transition-all duration-300 hover:scale-[1.02] group">
+                      <div className="flex items-center space-x-3">
+                        <Cog className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-300" />
+                        <span className="text-muted-foreground">Motor Shield:</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Badge variant="outline">L293D</Badge>
+                        <Info className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md animate-in fade-in-0 zoom-in-95 duration-300">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center space-x-2">
+                        <Cog className="h-5 w-5 text-primary" />
+                        <span>{componentInfo.motordriver.title}</span>
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <p className="text-muted-foreground">{componentInfo.motordriver.description}</p>
+                      <div>
+                        <h4 className="font-semibold mb-2">Technical Details:</h4>
+                        <ul className="space-y-1 text-sm text-muted-foreground">
+                          {componentInfo.motordriver.specs.map((spec, index) => (
+                            <li key={index} className="flex items-center space-x-2">
+                              <div className="w-1 h-1 bg-primary rounded-full"></div>
+                              <span>{spec}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg cursor-pointer hover:bg-muted/50 transition-all duration-300 hover:scale-[1.02] group">
+                      <div className="flex items-center space-x-3">
+                        <Zap className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-300" />
+                        <span className="text-muted-foreground">Drive System:</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Badge variant="outline">4x DC Motors</Badge>
+                        <Info className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md animate-in fade-in-0 zoom-in-95 duration-300">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center space-x-2">
+                        <Zap className="h-5 w-5 text-primary" />
+                        <span>{componentInfo.motors.title}</span>
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <p className="text-muted-foreground">{componentInfo.motors.description}</p>
+                      <div>
+                        <h4 className="font-semibold mb-2">Motor Specifications:</h4>
+                        <ul className="space-y-1 text-sm text-muted-foreground">
+                          {componentInfo.motors.specs.map((spec, index) => (
+                            <li key={index} className="flex items-center space-x-2">
+                              <div className="w-1 h-1 bg-primary rounded-full"></div>
+                              <span>{spec}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg cursor-pointer hover:bg-muted/50 transition-all duration-300 hover:scale-[1.02] group">
+                      <div className="flex items-center space-x-3">
+                        <Bot className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-300" />
+                        <span className="text-muted-foreground">Capabilities:</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="flex space-x-2">
+                          <Badge variant="default">Face Tracking</Badge>
+                          <Badge variant="default">Line Following</Badge>
+                        </div>
+                        <Info className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md animate-in fade-in-0 zoom-in-95 duration-300">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center space-x-2">
+                        <Bot className="h-5 w-5 text-primary" />
+                        <span>{componentInfo.capabilities.title}</span>
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <p className="text-muted-foreground">{componentInfo.capabilities.description}</p>
+                      <div>
+                        <h4 className="font-semibold mb-2">AI Features:</h4>
+                        <ul className="space-y-1 text-sm text-muted-foreground">
+                          {componentInfo.capabilities.specs.map((spec, index) => (
+                            <li key={index} className="flex items-center space-x-2">
+                              <div className="w-1 h-1 bg-primary rounded-full"></div>
+                              <span>{spec}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
           </div>
